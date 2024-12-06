@@ -1,0 +1,15 @@
+pipeline{
+    agent any
+        stages{
+            stage ("Maven execution"){
+                steps{
+                     bat 'mvn clean install'
+                }
+            }
+            stage("jar file execution"){
+                steps{
+                    bat 'target/java -jar MavenProject-v1.jar'
+                }
+            }
+        }
+    }
