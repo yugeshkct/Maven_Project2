@@ -8,7 +8,7 @@ pipeline{
             }
             stage("jar file execution"){
                 steps{
-                    bat 'target/java -jar MavenProject-v1.jar'
+                    bat 'java -jar target/MavenProject-v1.jar'
                 }
             }
         }
